@@ -41,14 +41,16 @@ void ll_insert(Node **p_head, int val) {
 
 
 void ll_free(Node *head) {
-    Node *temp = head;
+    Node *cur = head;
 
     if (head ->next == NULL) free(head);
 
     while(head->next != NULL) {
         head = head->next;
-        free(temp);
+        free(cur);
+        cur = head;
     }
+    free(cur);
 }
 
 // ill try a recursive approach
