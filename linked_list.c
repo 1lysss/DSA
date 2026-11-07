@@ -23,20 +23,26 @@ Node* linked_list(size_t size) {
 
 
 void ll_insert(Node **p_head, int val) {
-    Node *cur = *p_head;   
-    
-    if (cur == NULL) {
-        perror("ll_insert : list is NULL\n");
+    Node *cur = *p_head;
+    Node *to_add = (Node*)malloc(sizeof(Node));
+    to_add->value = val;
+    to_add->next = NULL;
+
+    if (!cur) {
+        *p_head = to_add;
         return;
     }
-    
-    while(cur->next != NULL) {
-        cur = cur->next;  // reach the last elem
+
+    if (cur->next == NULL) {
+        cur->next = to_add;
+        return;
     } 
 
-    Node *new = (Node*)malloc(sizeof(Node)); 
-    cur->next = new;
-    new->value = val;
+    while (cur->next != NULL) {
+        cur = cur->next;
+    }
+
+    cur->next = to_add;
 }
 
 
@@ -53,9 +59,8 @@ void ll_free(Node *head) {
     free(cur);
 }
 
-// ill try a recursive approach
 void ll_print(Node *head) {
     if (!head) return;
     printf("%d \t", head->value);
-    return ll_print(head->next);
+    ll_print(head->next);
 }
