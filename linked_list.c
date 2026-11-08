@@ -33,11 +33,6 @@ void ll_insert(Node **p_head, int val) {
         return;
     }
 
-    // if (cur->next == NULL) {
-    //     cur->next = to_add;
-    //     return;
-    // } 
-
     while (cur->next != NULL) {
         cur = cur->next;
     }
