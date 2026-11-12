@@ -6,21 +6,18 @@ This project is built for learning and practice. The goal is to keep the code ea
 
 ## Included
 
-- Arrays
-- Linked List
-- Stack
-- Queue
-- Trees
-- Graphs
-- Hash Table
-- Heap
+- Arrays        []
+- Linked List   [Done]
+- Stack         []
+- Queue         []
+- Trees         []
+- Graphs        []
+- Hash Table    []
 - Basic utility functions and APIs
 
 ## Purpose
 
-The idea is to understand how data structures work, how they are built, and how to use them in small projects.
-
-This is not a large library or framework. It is a clean, beginner-friendly set of implementations that are easy to explore and build on.
+The idea is to understand how data structures work, basic pointer arithmetic and how to handle memory
 
 ## Getting started
 
