@@ -18,14 +18,3 @@ This project is built for learning and practice. The goal is to keep the code ea
 ## Purpose
 
 The idea is to understand how data structures work, basic pointer arithmetic and how to handle memory
-
-## Getting started
-
-Compile the project with a C compiler and run the example program.
-
-```bash
-gcc main.c -o dsa
-./dsa
-```
-
-If you want to add new data structures or improve the existing ones, feel free to contribute.
