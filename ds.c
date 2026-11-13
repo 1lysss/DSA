@@ -45,17 +45,14 @@ void da_free(da *arr) {
     if (!arr->data) return;
 
     free(arr->data);
+    arr->data = NULL;
     arr->capacity = 0;
     arr->count = 0;
 }
 /////////////////////////////////////////////////////////////////////////
 /////////////////////////// LINKED LIST START ///////////////////////////
 
-/*
-* Initializes a linked list
-* @param size specify the size of the linked list
-* @return a pointer to the head
-*/
+
 Node* linked_list(size_t size) {
     if (size == 0) return NULL;
     Node *temp = calloc(1, sizeof(Node));

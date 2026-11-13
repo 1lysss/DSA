@@ -10,18 +10,22 @@ typedef struct Node{
     struct Node *next;
 } Node;
 
-Node* linked_list(size_t size);
-void ll_insert(Node **p_head, int value);
-void ll_free(Node *head);
-void ll_print(Node *head);
-int ll_count(Node *head);
-
-
 typedef struct dynamic_array {
     int *data;
     size_t capacity; // overall space 
     size_t count;  // nmbr of elmnts
 } da;
+
+/*
+* Initializes a linked list
+* @param size specify the size of the linked list
+* @return a pointer to the head
+*/
+Node* linked_list(size_t size);
+void ll_insert(Node **p_head, int value);
+void ll_free(Node *head);
+void ll_print(Node *head);
+int ll_count(Node *head);
 
 da da_init(size_t size);
 void da_insert(da *arr, int val);

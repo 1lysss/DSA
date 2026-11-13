@@ -12,6 +12,6 @@ int main()
     for (size_t i = 0; i < arr.count; i++) {
         printf("data[%zu] = %d\n", i, arr.data[i]);
     }
-
+    da_free(&arr);
     return 0;
 }
