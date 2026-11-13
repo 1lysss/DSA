@@ -1,7 +1,13 @@
-#include <stdlib.h>
-#include <stdio.h>
-#include <stddef.h>
-#include "linked_list.h" 
+#include "ds.h"
+
+da da_init(size_t size) {
+    if (size == 0) return (da){0};
+
+    da arr = {.capacity = size, .count = 0};
+    arr.data = (int*)malloc(size*sizeof(int));
+    return arr;
+}
+
 
 /*
 * Initializes a linked list

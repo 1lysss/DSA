@@ -18,3 +18,6 @@ This project is built for learning and practice. The goal is to keep the code ea
 ## Purpose
 
 The idea is to understand how data structures work, basic pointer arithmetic and how to handle memory
+
+
+(ai was not used in this project since my purpose is to understand the fundamentals and not rush through them whenever im stuck)
