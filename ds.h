@@ -1,8 +1,9 @@
 #include <stddef.h>
 #include <stdlib.h>
 #include <stdio.h>
-#ifndef LINKED_LIST_H
-#define LINKED_LIST_H
+#ifndef DS_H
+#define DS_H
+#define DA_DEFAULT_CAP 8
 
 typedef struct Node{
     int value;
@@ -18,11 +19,14 @@ int ll_count(Node *head);
 
 typedef struct dynamic_array {
     int *data;
-    size_t capacity;
-    size_t count;
+    size_t capacity; // overall space 
+    size_t count;  // nmbr of elmnts
 } da;
 
 da da_init(size_t size);
-
+void da_insert(da *arr, int val);
+void da_free(da *arr);
+void da_print(da arr);
+void da_free(da *arr);
 
 #endif

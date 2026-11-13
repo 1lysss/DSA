@@ -1,14 +1,17 @@
 #include "ds.h"
-
+#include <assert.h>
 int main()
 {
-    Node* ll = linked_list(2026);
+    da arr  = da_init(0);
 
-   ll_insert(&ll, 11);
+    for (int i = 0; i < 20; i++) {
+        da_insert(&arr, i * 10);
+        printf("inserted %d -> count=%zu | capacity=%zu\n", i * 10, arr.count, arr.capacity);
+    }
 
-    printf("ll_count : %d\n", ll_count(ll));
-    // ll_print(ll);
+    for (size_t i = 0; i < arr.count; i++) {
+        printf("data[%zu] = %d\n", i, arr.data[i]);
+    }
 
-    ll_free(ll);
     return 0;
 }
