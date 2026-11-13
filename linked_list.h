@@ -14,5 +14,6 @@ Node* linked_list(size_t size);
 void ll_insert(Node **p_head, int value);
 void ll_free(Node *head);
 void ll_print(Node *head);
+int ll_count(Node *head);
 
 #endif

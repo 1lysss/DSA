@@ -59,3 +59,8 @@ void ll_print(Node *head) {
     printf("%d \t", head->value);
     ll_print(head->next);
 }
+
+int ll_count(Node *head) {
+    if (head == NULL) return 0;
+    return 1 + ll_count(head->next);
+}

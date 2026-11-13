@@ -1,0 +1,17 @@
+#include <stddef.h>
+#ifndef DYNAMIC_ARRAY
+#define DYNAMIC_RRAY
+
+typedef struct dynamic_array {
+    int *data;
+    size_t capacity;
+    size_t count;
+} da;
+
+da da_init(size_t size) {
+    
+}
+
+
+
+#endif

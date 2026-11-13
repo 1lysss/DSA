@@ -2,15 +2,13 @@
 
 int main()
 {
-    Node* ll = linked_list(0);
+    Node* ll = linked_list(2026);
 
-    ll_insert(&ll, 18);
-    ll_insert(&ll, 23);
-    ll_insert(&ll, 11);
-    ll_insert(&ll, 9);
-    ll_insert(&ll, 1);
+   ll_insert(&ll, 11);
 
-    ll_print(ll);
+    printf("ll_count : %d\n", ll_count(ll));
+    // ll_print(ll);
+
     ll_free(ll);
     return 0;
 }
