@@ -9,6 +9,7 @@ typedef struct dynamic_array {
     size_t count;
 } da;
 
+da da_init(size_t size);
 
 
 #endif
