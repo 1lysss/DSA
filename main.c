@@ -13,10 +13,13 @@ int main()
         printf("data[%zu] = %d\n", i, arr.data[i]);
     }
 
-    da_remove(&arr, 0);
-    printf("===> After: \n");
+    da_remove(&arr, 19);
+    printf("==============================> After: \n");
     da_print(arr);
 
+    printf("Insertion after removal of element: \n");
+    da_insert(&arr, 911);
+    da_print(arr);
 
     da_free(&arr);
     return 0;

@@ -50,22 +50,16 @@ void da_free(da *arr) {
     arr->count = 0;
 }
 
-/**
- * @brief remove a value by index
- * 
- *  */ 
+
 void da_remove(da *arr, size_t idx) {
     if (!arr->data) return;
-    if (idx < arr->count) { // valid idx (idx--, deal w/ as a natural index) also size_t in unsigned
+    if (idx < arr->count) { // valid idx, also size_t is unsigned (>=0)
        
-        for (int i = idx; i<arr->count - 1; i++) {
+        for (size_t i = idx; i<arr->count - 1; i++) {
             arr->data[i] = arr->data[i+1];
         }
-        arr->data = (int*)realloc(arr->data, (arr->count - 1)*sizeof(int));
         arr->count--;
-    } else {     // TODO : fix cap
-        return;
-    }
+    } else return;
 }
 
 /////////////////////////////////////////////////////////////////////////
