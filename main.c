@@ -6,12 +6,18 @@ int main()
 
     for (int i = 0; i < 20; i++) {
         da_insert(&arr, i * 10);
-        printf("inserted %d -> count=%zu | capacity=%zu\n", i * 10, arr.count, arr.capacity);
+        // printf("inserted %d -> count=%zu | capacity=%zu\n", i * 10, arr.count, arr.capacity);
     }
 
     for (size_t i = 0; i < arr.count; i++) {
         printf("data[%zu] = %d\n", i, arr.data[i]);
     }
+
+    da_remove(&arr, 0);
+    printf("===> After: \n");
+    da_print(arr);
+
+
     da_free(&arr);
     return 0;
 }

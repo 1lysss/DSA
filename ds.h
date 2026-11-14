@@ -32,5 +32,6 @@ void da_insert(da *arr, int val);
 void da_free(da *arr);
 void da_print(da arr);
 void da_free(da *arr);
+void da_remove(da *arr, size_t index);
 
 #endif
