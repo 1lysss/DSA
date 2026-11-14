@@ -21,7 +21,7 @@ typedef struct dynamic_array {
 * @param size specify the size of the linked list
 * @return a pointer to the head
 */
-Node* linked_list(size_t size);
+Node* ll_init(size_t size);
 void ll_insert(Node **p_head, int value);
 void ll_free(Node *head);
 void ll_print(Node *head);

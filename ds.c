@@ -66,7 +66,7 @@ void da_remove(da *arr, size_t idx) {
 /////////////////////////// LINKED LIST START ///////////////////////////
 
 
-Node* linked_list(size_t size) {
+Node* ll_init(size_t size) {
     if (size == 0) return NULL;
     Node *temp = calloc(1, sizeof(Node));
     Node *cur = temp;
